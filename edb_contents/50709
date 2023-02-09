@@ -1,0 +1,13 @@
+# Exploit Title: WordPress Plugin IP2Location Country Blocker 2.26.7 - Stored Cross Site Scripting (XSS) (Authenticated)
+# Date: 02-02-2022
+# Exploit Author: Ahmet Serkan Ari
+# Software Link: https://wordpress.org/plugins/ip2location-country-blocker/
+# Version: 2.26.7
+# Tested on: Linux
+# CVE: N/A
+# Thanks: Ceylan Bozogullarindan
+
+
+# Description:
+IP2Location Country Blocker is a plugin enables user to block unwanted traffic from accesing Wordpress frontend (blog pages) or backend (admin area) by countries or proxy servers. It helps to reduce spam and unwanted sign ups easily by preventing unwanted visitors from browsing a particular page or entire website.
+An authenticated user is able to inject arbitrary Javascript or HTML code to the 'Frontend Settings' interface available in settings page of the plugin (Country Blocker), due to incorrect sanitization of user-supplied data and achieve a Stored Cross-Site Scripting attack against the administrators or the other authenticat

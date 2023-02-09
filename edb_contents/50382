@@ -1,0 +1,25 @@
+# Exploit Title: Wordpress Plugin BulletProof Security 5.1 - Sensitive Information Disclosure
+# Date 04.10.2021
+# Exploit Author: Ron Jost (Hacker5preme)
+# Vendor Homepage: https://forum.ait-pro.com/read-me-first/
+# Software Link: https://downloads.wordpress.org/plugin/bulletproof-security.5.1.zip
+# Version: <= 5.1
+# Tested on: Ubuntu 18.04
+# CVE: CVE-2021-39327
+# CWE: CWE-200
+# Documentation: https://github.com/Hacker5preme/Exploits/blob/main/Wordpress/CVE-2021-39327/README.md
+
+
+'''
+Description:
+The BulletProof Security WordPress plugin is vulnerable to sensitive information disclosure due to a file path disclosure in the publicly accessible 
+~/db_backup_log.txt file which grants attackers the full path of the site, in addition to the path of database backup files. 
+This affects versions up to, and including, 5.1.
+'''
+
+'''
+'Banner:
+'''
+banner = '''
+  ______     _______     ____   ___ ____  _      _____ ___ _________ _____ 
+ / ___    / / ____|   |___  / _ \___ /

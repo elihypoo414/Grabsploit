@@ -1,0 +1,47 @@
+# Exploit Title: WordPress Plugin Hotel Listing 3 - 'Multiple' Cross-Site Scripting (XSS)
+# Date: 2021-10-28
+# Exploit Author: Vulnerability Lab
+# Vendor Homepage: https://hotel.eplug-ins.com/
+# Software Link: https://hotel.eplug-ins.com/hoteldoc/
+# Version: v3
+# Tested on: Linux
+
+
+Document Title:
+===============
+Hotel Listing (WP Plugin) v3.x - MyAccount XSS Vulnerability
+
+
+References (Source):
+====================
+https://www.vulnerability-lab.com/get_content.php?id=2277
+
+
+Release Date:
+=============
+2021-10-28
+
+
+Vulnerability Laboratory ID (VL-ID):
+====================================
+2277
+
+
+Common Vulnerability Scoring System:
+====================================
+5.3
+
+
+Vulnerability Class:
+====================
+Cross Site Scripting - Persistent
+
+
+Current Estimated Price:
+========================
+500€ - 1.000€
+
+
+Product & Service Introduction:
+===============================
+Hotel, Motel , Bar & Restaurant Listing Plugin + Membership plug

@@ -1,0 +1,22 @@
+# Exploit Title: WordPress Plugin WP User Frontend 3.5.25 - SQLi (Authenticated)
+# Date 20.02.2022
+# Exploit Author: Ron Jost (Hacker5preme)
+# Vendor Homepage: https://wedevs.com/
+# Software Link: https://downloads.wordpress.org/plugin/wp-user-frontend.3.5.25.zip
+# Version: < 3.5.25
+# Tested on: Ubuntu 20.04
+# CVE: CVE-2021-25076
+# CWE: CWE-89
+# Documentation: https://github.com/Hacker5preme/Exploits/blob/main/Wordpress/CVE-2021-25076/README.md
+
+'''
+Description:
+The WP User Frontend WordPress plugin before 3.5.26 does not validate and escape the status parameter
+before using it in a SQL statement in the Subscribers dashboard, leading to an SQL injection.
+Due to the lack of sanitisation and escaping, this could also lead to Reflected Cross-Site Scripting
+'''
+
+banner = '''
+
+ _|_|_|  _|      _|  _|_|_|_|              _|_|      _|      _|_|      _|                _|_|    _|_|_|_|    _|    _|_|_|_|_|    _|_|_|  
+_|        _|      _|  _|                  _|    _|  _|  _|

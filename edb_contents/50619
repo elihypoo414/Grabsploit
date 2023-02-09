@@ -1,0 +1,24 @@
+# Exploit Title: WordPress Plugin WP Visitor Statistics 4.7 - SQL Injection
+# Date 22/12/2021
+# Exploit Author: Ron Jost (Hacker5preme)
+# Vendor Homepage: https://www.plugins-market.com/
+# Software Link: https://downloads.wordpress.org/plugin/wp-stats-manager.4.7.zip
+# Version: <= 4.7
+# Tested on: Ubuntu 18.04
+# CVE: CVE-2021-24750
+# CWE: CWE-89
+# Documentation: https://github.com/Hacker5preme/Exploits/blob/main/Wordpress/CVE-2021-24750/README.md
+
+'''
+Description:
+The plugin does not properly sanitise and escape the refUrl in the refDetails AJAX action,
+available to any authenticated user, which could allow users with a role as low as
+subscriber to perform SQL injection attacks
+'''
+
+# Banner:
+banner = '''
+ ___  _  _  ____     ___   ___  ___   __     ___   __  ___  ___   ___  
+ / __)( / )( ___)___(__  / _ (__  /  )___(__  /. |(__ )| __) / _  
+( (__    /  )__)(___)/ _/( (_) )/ _/  )((___)/ _/(_  _)/ / |__ ( (_) )
+ \___)  /  (____)   (____)\___/(____)(__)   (____) (

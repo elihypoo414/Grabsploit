@@ -1,0 +1,16 @@
+# Exploit Title: WordPress Plugin Learnpress 4.1.4.1 - Arbitrary Image Renaming
+# Date: 08-01-2022
+# Exploit Author: Ceylan Bozogullarindan
+# Author Webpage: https://bozogullarindan.com
+# Vendor Homepage: https://thimpress.com/
+# Software Link: https://thimpress.com/learnpress-plugin/
+# Version: 4.1.4.1
+# Tested on: Linux
+# CVE: CVE-2022-0377 (https://wpscan.com/vulnerability/0d95ada6-53e3-4a80-a395-eacd7b090f26)
+
+
+# Description:
+
+LearnPress is a WordPress complete solution for creating a Learning Management System (LMS). It can help you to create courses, lessons and quizzes.
+
+A user of this LMS can upload an image as a profile avatar after the registration.  After this process the user crops and saves the image. Then a 'POST' request that contains user supplied name of the image is sent to the server for renaming and cropping of the image. As a result of this request, the name of the user-supplied image is changed with a MD5 value. This process can be conducted only wh

@@ -1,0 +1,13 @@
+# Exploit Title: WordPress Plugin Popular Posts 5.3.2 - Remote Code Execution (RCE) (Authenticated)
+# Date: 15/07/2021
+# Exploit Author: Simone Cristofaro
+# Vendor Homepage: https://it.wordpress.org/plugins/wordpress-popular-posts/
+# Software Link: https://downloads.wordpress.org/plugin/wordpress-popular-posts.5.3.2.zip
+# Version: 5.3.2 or below
+# Tested on: Debian 10, WordPress 5.7.2, PHP version 7.3.27
+# Reference: https://blog.nintechnet.com/improper-input-validation-fixed-in-wordpress-popular-posts-plugin/
+# Notes: It's required that the Popular Posts widget is active (ie. in the footer section) and gd extension for PHP is
+# enabled (otherwise WPP can't generate thumbnails). Also, the authenticated user must have 'Contributor' role or above.
+
+# This script will login with the provided credentials, create a new post and add a custom field with the link to a
+# web shell, that will be automatically downloaded by the server. If you don't want to upload the file, you need to

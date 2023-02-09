@@ -1,0 +1,24 @@
+# Exploit Title: WordPress Plugin RegistrationMagic V 5.0.1.5 - SQL Injection (Authenticated)
+# Date 23.01.2022
+# Exploit Author: Ron Jost (Hacker5preme)
+# Vendor Homepage: https://registrationmagic.com/
+# Software Link: https://downloads.wordpress.org/plugin/custom-registration-form-builder-with-submission-manager.5.0.1.5.zip
+# Version: <= 5.0.1.5
+# Tested on: Ubuntu 20.04
+# CVE: CVE-2021-24862
+# CWE: CWE-89
+# Documentation: https://github.com/Hacker5preme/Exploits/blob/main/Wordpress/CVE-2021-24862/README.md
+
+'''
+Description:
+The RegistrationMagic WordPress plugin before 5.0.1.6 does not escape user input in its rm_chronos_ajax AJAX action
+before using it in a SQL statement when duplicating tasks in batches, which could lead to a SQL injection issue.
+'''
+
+# Banner:
+import os
+
+banner = '''
+                                                                 
+ _____ _____ _____     ___ ___ ___ ___       ___ ___ ___ ___ ___ 
+|     |  |  |   __|___|_  |   |_  |_  |  __

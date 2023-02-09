@@ -1,0 +1,16 @@
+# Exploit Title: WordPress Plugin Error Log Viewer 1.1.1 - Arbitrary File Clearing (Authenticated)
+# Date: 09-11-2021
+# Exploit Author: Ceylan Bozogullarindan
+# Exploit Website: https://bozogullarindan.com
+# Vendor Homepage: https://bestwebsoft.com/
+# Software Link: https://bestwebsoft.com/products/wordpress/plugins/error-log-viewer/
+# Version: 1.1.1
+# Tested on: Linux
+# CVE: CVE-2021-24966 (https://wpscan.com/vulnerability/166a4f88-4f0c-4bf4-b624-5e6a02e21fa0)
+
+
+# Description:
+
+Error Log Viewer is a simple utility plugin that helps to find and view log files with errors right from the WordPress admin dashboard. Get access to all log files from one place. View the latest activity, select logs by date, view a full log file or clear a log file!
+
+I've especially emphasized 'clearing a log file' statement because the feature of 'clearing a log file' can be used to delete an arbitrary file in a Wordpress web site. The reason of the vulnerability is that, the value of a file p

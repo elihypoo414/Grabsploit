@@ -1,0 +1,20 @@
+# Exploit Title: WordPress Plugin Perfect Survey - 1.5.1 - SQLi (Unauthenticated)
+# Date 18.02.2022
+# Exploit Author: Ron Jost (Hacker5preme)
+# Vendor Homepage: https://www.getperfectsurvey.com/
+# Software Link: https://web.archive.org/web/20210817031040/https://downloads.wordpress.org/plugin/perfect-survey.1.5.1.zip
+# Version: < 1.5.2
+# Tested on: Ubuntu 20.04
+# CVE: CVE-2021-24762
+# CWE: CWE-89
+# Documentation: https://github.com/Hacker5preme/Exploits/blob/main/Wordpress/CVE-2021-24762/README.md
+
+'''
+Description:
+The Perfect Survey WordPress plugin before 1.5.2 does not validate and escape the question_id GET parameter before
+using it in a SQL statement in the get_question AJAX action, allowing unauthenticated users to perform SQL injection.
+'''
+
+banner = '''
+                                                                                                      
+   ___    _     _  ______         ____   ____     ____   ___           ____  _    _  _______  _____    ___

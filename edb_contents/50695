@@ -1,0 +1,24 @@
+# Exploit Title: Wordpress Plugin Download Monitor WordPress V 4.4.4 - SQL Injection (Authenticated)
+# Date 28.01.2022
+# Exploit Author: Ron Jost (Hacker5preme)
+# Vendor Homepage: https://www.download-monitor.com/
+# Software Link: https://downloads.wordpress.org/plugin/download-monitor.4.4.4.zip
+# Version: < 4.4.5
+# Tested on: Ubuntu 20.04
+# CVE: CVE-2021-24786
+# CWE: CWE-89
+# Documentation: https://github.com/Hacker5preme/Exploits/blob/main/Wordpress/CVE-2021-24786/README.md
+
+'''
+Description:
+The Download Monitor WordPress plugin before 4.4.5 does not properly validate and escape the 'orderby' GET parameter
+before using it in a SQL statement when viewing the logs, leading to an SQL Injection issue
+'''
+
+# Banner:
+banner = '''
+
+   ___         __    ____   ___ ____  _      ____  _  _ _____ ___   __   
+  / __/   //__  |___  / _ \___ / |    |___ | || |___  ( _ ) / /_  
+ / /     / /_\_____ __) | | | |__) | |_____ __) | || |_ / // _ | '_  
+/ /___   V //_|_____/ __/| |_
